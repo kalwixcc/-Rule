@@ -82,16 +82,6 @@ dns:
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-## 兜底 DNS
-#  nameserver:
-#    - https://dns.alidns.com/dns-query
-#    - https://doh.pub/dns-query
-## 转发规则DNS
-#nameserver-policy:
-#  "geosite:geolocation-!cn":
-#    - https://8.8.8.8/dns-query#🕹️Proxy
-#    - https://cloudflare-dns.com/dns-query#🕹️Proxy
-#---------------------
   direct-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
@@ -118,7 +108,7 @@ proxy-groups:
 #>>自动测速
   - {name:  🃏Smart, type: url-test, include-all: false, tolerance: 100, interval:300, use: [订阅机场]],  filter: "AWS|IT7|DMIT"}
 #>>自动回退
-#  - {name:  🃏Smart, type: fallback, include-all: false, tolerance: 100, interval: 300, use: [Made],  filter: "AWS|IT7|DMIT"}
+#  - {name:  🃏Smart, type: fallback, include-all: false, tolerance: 100, interval: 300, use: [订阅机场],  filter: "AWS|IT7|DMIT"}
 #---------------------规则匹配---------------------
 rules:
 #  - AND,((NETWORK,UDP),(DST-PORT,443)),REJECT
